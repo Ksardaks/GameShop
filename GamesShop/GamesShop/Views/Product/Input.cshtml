@@ -12,7 +12,7 @@
             Данні про гру (Розгорнути/Згорнути)
         </a>
 
-        <div class="collapse" id="GameInfoCollapse">
+        <div class="collapse" style=" border: #f3ca20 1px solid;" id="GameInfoCollapse">
             <div class="row mt-5">
                 <div class="mb-3 col-6">
                     <label for="NameInput" class="form-label col-6">Name</label>
@@ -90,26 +90,26 @@
 
                 <div class="mb-3 col-12">
                     <label class="form-label col-12">Category</label>
-                    <a class="btn btn-primary col-12" data-ajax="true" data-ajax-mode="after" data-ajax-update="#Categories" href="/Product/Category">Add Cat</a>
+                    <a class="btn btn-success col-12" data-ajax="true" data-ajax-mode="after" data-ajax-update="#Categories" href="/Product/Category">Add Cat</a>
                     <table id="Categories" cellspacing="10" cellpadding="10" class="col-12 mt-5">
                     </table>
                 </div>
 
                 <div class="mb-3 col-12">
                     <label class="form-label col-12">Files</label>
-                    <a class="btn btn-primary col-12" data-ajax="true" data-ajax-mode="after" data-ajax-update="#File" href="/Product/File">Add File</a>
+                    <a class="btn btn-success col-12" data-ajax="true" data-ajax-mode="after" data-ajax-update="#File" href="/Product/File">Add File</a>
                     <table id="File" cellspacing="10" cellpadding="10" class="col-12 mt-5">
                     </table>
                 </div>
             </div>
         </div>
 
-        <a class="btn btn-outline-primary mt-5 mb-5" data-bs-toggle="collapse" href="#SystemRequirementsCollapse" role="button" aria-expanded="false" aria-controls="SystemRequirementsCollapse GameInfoCollapse">
+        <a class="btn btn-outline-primary mt-5" data-bs-toggle="collapse" href="#SystemRequirementsCollapse" role="button" aria-expanded="false" aria-controls="SystemRequirementsCollapse GameInfoCollapse">
             Системні вимоги (Розгорнути/Згорнути)
         </a>
 
-        <div class="collapse" id="SystemRequirementsCollapse">
-            <div class="row">
+        <div class="collapse" style=" border: #f3ca20 1px solid;" id="SystemRequirementsCollapse">
+            <div class="row mt-5">
 
                 <div class="mb-3 col-6">
                     <label for="ProcesorInput" class="form-label col-12">Procesor</label>
@@ -138,7 +138,7 @@
 
                 <div class="mb-3 col-12">
                     <label class="form-label col-12">OS</label>
-                    <a class="btn btn-primary col-12" data-ajax="true" data-ajax-mode="after" data-ajax-update="#OS" href="/Product/OperatingSystem">Add OS</a>
+                    <a class="btn btn-success col-12" data-ajax="true" data-ajax-mode="after" data-ajax-update="#OS" href="/Product/OperatingSystem">Add OS</a>
                     <table id="OS" cellspacing="10" cellpadding="10" class="col-12 mt-5">
                     </table>
                 </div>
@@ -146,11 +146,14 @@
             </div>
         </div>
 
-        <div class="mb-3 col-6">
-            <button class="btn btn-primary col-12" onclick="PopUpHide();">Відмінити</button>
+        <div class="row mt-5">
+            <div class="mb-3 col-6">
+                <button class="btn btn-primary col-12" onclick="PopUpHide();">Відмінити</button>
+            </div>
+            <div class="mb-3 col-6">
+                <input type="submit" class="btn btn-primary col-12" />
+            </div>
         </div>
-        <div class="mb-3 col-6">
-            <input type="submit" class="btn btn-primary col-12" />
-        </div>
+     
     </div>
         }

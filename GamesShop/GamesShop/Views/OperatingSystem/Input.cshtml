@@ -1,7 +1,8 @@
 ﻿@model GamesShop.Models.OperatingSystem
 
-@using (Ajax.BeginForm("Input", "OperatingSystem", new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "PopUpContent" }, new { @class = "col-12 container" }))
+@using (Ajax.BeginForm("Input", "OperatingSystem", new AjaxOptions { HttpMethod = "Post", OnSuccess= "PopUpHide(); Upd('/Manager/OperatingSystems');", UpdateTargetId = "PopUpContent" }, new { @class = "col-12 container" }))
 {
+    
     @Html.HiddenFor(m => m.Id)
     <div class="row">
         <div class="mb-3 col-12">
@@ -13,9 +14,9 @@
             <button class="btn btn-primary col-12" onclick="PopUpHide();">Відмінити</button>
         </div>
         <div class="mb-3 col-6">
-            <input type="submit" class="btn btn-primary col-12" />
+            <input value="Зберегти" type="submit" class="btn btn-primary col-12" />
         </div>
     </div>
-
 }
+
 

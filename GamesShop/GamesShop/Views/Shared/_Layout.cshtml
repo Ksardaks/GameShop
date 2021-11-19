@@ -61,6 +61,50 @@
                 box-shadow: 0px 0px 9px 1px #f3ca20 !important;
             }
 
+        .btn-success {
+            background-color: #3d3d3d;
+            border-color: #f3ca20;
+            border-radius: 0px;
+            color: #ffffff;
+            outline: none !important;
+            transition-duration: 0.3s;
+        }
+
+            .btn-success:hover {
+                background-color: #000000;
+                border-color: #000000;
+            }
+
+            .btn-success:focus,
+            .btn-success:active {
+                background-color: #f3ca20;
+                border-color: #f3ca20;
+                color: #000000;
+                box-shadow: 0px 0px 9px 1px #f3ca20 !important;
+            }
+
+        .btn-danger {
+            background-color: #99003A;
+            border-color: #99003A;
+            border-radius: 0px;
+            color: #ffffff;
+            outline: none !important;
+            transition-duration: 0.3s;
+        }
+
+            .btn-danger:hover {
+                background-color: #000000;
+                border-color: #000000;
+            }
+
+            .btn-danger:focus,
+            .btn-danger:active {
+                background-color: #f3ca20;
+                border-color: #f3ca20;
+                color: #000000;
+                box-shadow: 0px 0px 9px 1px #f3ca20 !important;
+            }
+
 
         .btn-outline-primary {
             border-color: #f3ca20;
@@ -127,6 +171,11 @@
         function PopUpShow() {
             $("#PopUp").show();
             $("body").attr("style", "overflow-y: hidden;");
+        }
+
+
+        function Upd(route) {
+            $('#Table').load(route);
         }
 
         function PopUpHide() {

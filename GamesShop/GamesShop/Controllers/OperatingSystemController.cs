@@ -46,12 +46,27 @@ namespace GamesShop.Controllers
                     Context.OperatingSystems.Find(Model.Id).Name = Model.Name;
                     Context.SaveChanges();
                 }
-                return RedirectToRoute("Manager/OperatingSystems");
+                return PartialView(Model);
             }
             else
             {
-                return PartialView();
+                return PartialView(Model);
             }
+        }
+
+        public ActionResult Delete(int Id)
+        {
+            ApplicationDbContext Context = new ApplicationDbContext();
+            return PartialView(Context.OperatingSystems.Find(Id));
+        }
+
+        [HttpPost]
+        public ActionResult Delete(GamesShop.Models.OperatingSystem Model)
+        {
+            ApplicationDbContext Context = new ApplicationDbContext();
+            Context.OperatingSystems.Remove(Context.OperatingSystems.Find(Model.Id));
+            Context.SaveChanges();
+            return PartialView(Model);
         }
     }
 }
