@@ -1,4 +1,5 @@
-﻿
+﻿@model List<GamesShop.Models.Category>
+
 <div class="col-12">
     <a class="btn btn-primary col-12 mt-5" data-ajax="true" data-ajax-loading="#Loading" data-ajax-mode="replace" data-ajax-success="PopUpShow();" data-ajax-update="#PopUpContent" href="/Category/Input/-1">Add</a>
 </div>
@@ -8,15 +9,15 @@
         <th>Name</th>
         <th>Operations</th>
     </tr>
-    @for (int i = 0; i < 10; i++)
-    { 
-    <tr>
-        <td>Экшен</td>
-        <td width="20%">
-            <button class="btn btn-primary col-12 mt-1">Edit</button>
-            <button class="btn btn-primary col-12 mt-1">Delete</button>
-        </td>
-    </tr>
+    @foreach (var Item in Model)
+    {
+        <tr>
+            <td>@Item.CategoryName</td>
+            <td width="20%">
+                <a data-ajax="true" data-ajax-loading="#Loading" data-ajax-mode="replace" data-ajax-success="PopUpShow();" data-ajax-update="#PopUpContent" href="/Category/Input/@Item.Id" class="btn btn-primary col-12 mt-1">Edit</a>
+                <a data-ajax="true" data-ajax-loading="#Loading" data-ajax-mode="replace" data-ajax-success="PopUpShow();" data-ajax-update="#PopUpContent" href="/Category/Delete/@Item.Id" class="btn btn-primary col-12 mt-1">Delete</a>
+            </td>
+        </tr>
     }
 
 </table>

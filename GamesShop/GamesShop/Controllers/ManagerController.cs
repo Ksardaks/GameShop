@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using GamesShop.Models;
-using Ninject;
 
 namespace GamesShop.Controllers
 {
@@ -23,17 +22,20 @@ namespace GamesShop.Controllers
 
         public ActionResult Categories()
         {
-            return PartialView();
+            ApplicationDbContext Context = new ApplicationDbContext();
+            return PartialView(Context.Categories.ToList());
         }
 
         public ActionResult Developers()
         {
-            return PartialView();
+            ApplicationDbContext Context = new ApplicationDbContext();
+            return PartialView(Context.Developers.ToList());
         }
      
         public ActionResult Publishers()
         {
-            return PartialView();
+            ApplicationDbContext Context = new ApplicationDbContext();
+            return PartialView(Context.Publishers.ToList());
         }
 
         public ActionResult OperatingSystems()

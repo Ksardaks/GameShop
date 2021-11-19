@@ -103,14 +103,6 @@ D:\University\GroupProg\GamesShop\GamesShop\bin\roslyn\System.Buffers.dll
 D:\University\GroupProg\GamesShop\GamesShop\bin\roslyn\System.Memory.dll
 D:\University\GroupProg\GamesShop\GamesShop\bin\roslyn\System.Numerics.Vectors.dll
 D:\University\GroupProg\GamesShop\GamesShop\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
-D:\University\GroupProg\GamesShop\GamesShop\bin\Ninject.dll
-D:\University\GroupProg\GamesShop\GamesShop\bin\Ninject.Web.Common.dll
-D:\University\GroupProg\GamesShop\GamesShop\bin\Ninject.Web.Common.WebHost.dll
-D:\University\GroupProg\GamesShop\GamesShop\bin\Ninject.Web.Mvc.dll
-D:\University\GroupProg\GamesShop\GamesShop\bin\Ninject.xml
-D:\University\GroupProg\GamesShop\GamesShop\bin\Ninject.Web.Common.xml
-D:\University\GroupProg\GamesShop\GamesShop\bin\Ninject.Web.Common.WebHost.xml
-D:\University\GroupProg\GamesShop\GamesShop\bin\Ninject.Web.Mvc.xml
 D:\University\GroupProg\GamesShop\GamesShop\obj\Debug\GamesShop.Migrations.InitialCreate.resources
 D:\University\GroupProg\GamesShop\GamesShop\obj\Debug\GamesShop.csproj.GenerateResource.cache
 D:\University\GroupProg\GamesShop\GamesShop\obj\Debug\GamesShop.Migrations._1.resources
