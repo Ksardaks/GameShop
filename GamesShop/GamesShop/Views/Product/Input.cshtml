@@ -1,0 +1,156 @@
+﻿@model GamesShop.Models.ProductInputViewModel
+
+@using (Ajax.BeginForm("Input", "Product", new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "Table" }, new { @class = "col-12 container", enctype = "multipart/form-data" }))
+{
+    <div class="row">
+
+        @Html.HiddenFor(m => m.Id);
+
+        @Html.ValidationSummary(true, "");
+
+        <a class="btn btn-outline-primary mt-5" data-bs-toggle="collapse" href="#GameInfoCollapse" role="button" aria-expanded="false" aria-controls="GameInfoCollapse SystemRequirementsCollapse">
+            Данні про гру (Розгорнути/Згорнути)
+        </a>
+
+        <div class="collapse" id="GameInfoCollapse">
+            <div class="row mt-5">
+                <div class="mb-3 col-6">
+                    <label for="NameInput" class="form-label col-6">Name</label>
+                    <input type="text" name="Name" class="form-control col-6" id="NameInput">
+
+                </div>
+
+                <div class="mb-3 col-2">
+                    <label for="DayInput" class="form-label">День релізу</label>
+                    <select name="Day" class="form-select">
+                        <option selected value="0">- - - -</option>
+                        @for (int i = 1; i < 32; i++)
+                        {
+                            <option value="@(i)">@(i)</option>
+                        }
+                    </select>
+                </div>
+                <div class="mb-3 col-2">
+                    <label for="MonthInput" class="form-label">Місяць релізу</label>
+                    <select name="Month" class="form-select">
+                        <option selected value="0">- - - -</option>
+                        @for (int i = 1; i < 13; i++)
+                        {
+                            <option value="@(i)">@(i)</option>
+                        }
+                    </select>
+                </div>
+                <div class="mb-3 col-2">
+                    <label for="YearInput" class="form-label">Рік релізу</label>
+                    <select name="Year" class="form-select">
+                        <option selected value="0">- - - -</option>
+                        @for (int i = 2030; i > 1899; i--)
+                        {
+                            <option value="@(i)">@(i)</option>
+                        }
+                    </select>
+                </div>
+              
+
+
+                <div class="mb-3 col-12">
+                    <label for="Description" class="form-label col-12">Description</label>
+                    <textarea rows="10" name="Description" class="form-control col-12" id="DescriptionInput"></textarea>
+                </div>
+
+                <div class="mb-3 col-6">
+                    <label for="PriceInput" class="form-label col-12">Price</label>
+                    <input type="number" name="Price" class="form-control col-12" id="PriceInput">
+                </div>
+
+                <div class="mb-3 col-6">
+                    <label for="RaitingInput" class="form-label col-12">Raiting</label>
+                    <input type="number" name="Raiting" class="form-control col-12" id="RaitingInput">
+                </div>
+
+                <div class="mb-3 col-6">
+                    <label class="form-label col-12">Developer</label>
+                    <select class="form-select" name="Developer" aria-label="Default select example">
+                        <option selected>- - - -</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+
+                <div class="mb-3 col-6">
+                    <label class="form-label col-12">Publisher</label>
+                    <select class="form-select" name="Publisher" aria-label="Default select example">
+                        <option selected>- - - -</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+
+                <div class="mb-3 col-12">
+                    <label class="form-label col-12">Category</label>
+                    <a class="btn btn-primary col-12" data-ajax="true" data-ajax-mode="after" data-ajax-update="#Categories" href="/Product/Category">Add Cat</a>
+                    <table id="Categories" cellspacing="10" cellpadding="10" class="col-12 mt-5">
+                    </table>
+                </div>
+
+                <div class="mb-3 col-12">
+                    <label class="form-label col-12">Files</label>
+                    <a class="btn btn-primary col-12" data-ajax="true" data-ajax-mode="after" data-ajax-update="#File" href="/Product/File">Add File</a>
+                    <table id="File" cellspacing="10" cellpadding="10" class="col-12 mt-5">
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <a class="btn btn-outline-primary mt-5 mb-5" data-bs-toggle="collapse" href="#SystemRequirementsCollapse" role="button" aria-expanded="false" aria-controls="SystemRequirementsCollapse GameInfoCollapse">
+            Системні вимоги (Розгорнути/Згорнути)
+        </a>
+
+        <div class="collapse" id="SystemRequirementsCollapse">
+            <div class="row">
+
+                <div class="mb-3 col-6">
+                    <label for="ProcesorInput" class="form-label col-12">Procesor</label>
+                    <input type="number" name="Processor" class="form-control col-12" id="ProcesorInput">
+                </div>
+
+                <div class="mb-3 col-6">
+                    <label for="RAMInput" class="form-label col-12">RAM</label>
+                    <input type="number" name="RAM" class="form-control col-12" id="RAMInput">
+                </div>
+
+                <div class="mb-3 col-6">
+                    <label for="VideoCardInput" class="form-label col-12">VideoCard</label>
+                    <input type="number" name="VideoCard" class="form-control col-12" id="VideoCardInput">
+                </div>
+
+                <div class="mb-3 col-6">
+                    <label for="DriveSpaceInput" class="form-label col-12">DriveSpace</label>
+                    <input type="number" name="DriveSpace" class="form-control col-12" id="DriveSpaceInput">
+                </div>
+
+                <div class="mb-3 col-12">
+                    <label for="OtherInput" class="form-label col-12">Other</label>
+                    <textarea class="form-control col-12" name="Other" id="OtherInput"></textarea>
+                </div>
+
+                <div class="mb-3 col-12">
+                    <label class="form-label col-12">OS</label>
+                    <a class="btn btn-primary col-12" data-ajax="true" data-ajax-mode="after" data-ajax-update="#OS" href="/Product/OperatingSystem">Add OS</a>
+                    <table id="OS" cellspacing="10" cellpadding="10" class="col-12 mt-5">
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mb-3 col-6">
+            <button class="btn btn-primary col-12" onclick="PopUpHide();">Відмінити</button>
+        </div>
+        <div class="mb-3 col-6">
+            <input type="submit" class="btn btn-primary col-12" />
+        </div>
+    </div>
+        }

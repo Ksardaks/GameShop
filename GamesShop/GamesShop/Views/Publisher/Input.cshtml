@@ -1,0 +1,16 @@
+﻿@using (Ajax.BeginForm("Input", "Publisher", new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "Table" }, new { @class = "col-12 container" }))
+{
+    <div class="mb-3 col-12">
+        <label for="NameInput" class="form-label col-6">Name</label>
+        <input type="text" class="form-control col-6" id="NameInput">
+    </div>
+
+    <div class="mb-3 col-6">
+        <button class="btn btn-primary col-12" onclick="PopUpHide();">Відмінити</button>
+    </div>
+    <div class="mb-3 col-6">
+        <input type="submit" class="btn btn-primary col-12" />
+    </div>
+}
+
+

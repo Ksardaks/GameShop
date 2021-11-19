@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+    <div class="row">
+        <div class="col-2 pt-4 pb-5 bg-dark mt-5" style="position: fixed; left: 0.1%;">
+            @Ajax.ActionLink("Products", "Products", "Manager", new AjaxOptions {LoadingElementId = "Loading", UpdateTargetId = "Table", InsertionMode = InsertionMode.Replace }, new { @class = "btn btn-primary col-12 mt-5" })
+            @Ajax.ActionLink("Categories", "Categories", "Manager", new AjaxOptions { LoadingElementId = "Loading", UpdateTargetId = "Table", InsertionMode = InsertionMode.Replace }, new { @class = "btn btn-primary col-12 mt-5" })
+            @Ajax.ActionLink("Developer", "Developers", "Manager", new AjaxOptions { LoadingElementId = "Loading", UpdateTargetId = "Table", InsertionMode = InsertionMode.Replace }, new { @class = "btn btn-primary col-12 mt-5" })
+            @Ajax.ActionLink("Publisher", "Publishers", "Manager", new AjaxOptions { LoadingElementId = "Loading", UpdateTargetId = "Table", InsertionMode = InsertionMode.Replace }, new { @class = "btn btn-primary col-12 mt-5" })
+            @Ajax.ActionLink("OperatingSystem", "OperatingSystems", "Manager", new AjaxOptions { LoadingElementId = "Loading", UpdateTargetId = "Table", InsertionMode = InsertionMode.Replace }, new { @class = "btn btn-primary col-12 mt-5" })
+        </div>
+
+
+        <div class="col-9 mt-5 bg-dark p-2 pt-5 pb-5 text-center" style="margin-left:40px; color: white; margin-left: auto; margin-right: auto;">
+            <div style="display: none; color: #f3ca20;" id="Loading">
+                <p class="col-12">
+                    Будь ласка зачекайте, йде завантаження
+                </p>                
+                <img src="https://acegif.com/wp-content/uploads/loading-25.gif" width="30" />
+            </div>
+            <div id="Table">
+                <p class="mt-5">Nothing selected</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="PopUp" style=" background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; position: absolute; top: 0; left: 0; overflow-y: scroll; display: none;">
+        <div  class="container mt-5">
+            <div class="row">
+                <div class="col-12 pt-4 pb-5 bg-dark mt-5" id="PopUpContent" style="color: white;">
+
+                </div>
+                <button class="col-1 offset-9 btn btn-primary" style="position: fixed; top: 100px;" onclick="PopUpHide();">X</button>
+            </div>
+        </div>
+    </div>
+
