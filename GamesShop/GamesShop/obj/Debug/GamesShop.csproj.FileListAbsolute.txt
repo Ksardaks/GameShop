@@ -107,3 +107,6 @@ D:\University\GroupProg\GamesShop\GamesShop\obj\Debug\GamesShop.Migrations.Initi
 D:\University\GroupProg\GamesShop\GamesShop\obj\Debug\GamesShop.csproj.GenerateResource.cache
 D:\University\GroupProg\GamesShop\GamesShop\obj\Debug\GamesShop.Migrations._1.resources
 D:\University\GroupProg\GamesShop\GamesShop\obj\Debug\GamesShop.Migrations._2.resources
+D:\University\GroupProg\GamesShop\GamesShop\obj\Debug\GamesShop.Migrations._3.resources
+D:\University\GroupProg\GamesShop\GamesShop\obj\Debug\GamesShop.Migrations._4.resources
+D:\University\GroupProg\GamesShop\GamesShop\obj\Debug\GamesShop.Migrations._5.resources

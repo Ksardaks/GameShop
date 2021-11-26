@@ -38,6 +38,7 @@ namespace GamesShop.Models
         public DbSet<File> Files { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<Key> Keys { get; set; }
 
         public static ApplicationDbContext Create()
         {
@@ -50,7 +51,7 @@ namespace GamesShop.Models
         public int Id { get; set; }
         public string ProductName { get; set; }
         public string Description { get; set; }
-        public int Rating { get; set; }
+        public double Rating { get; set; }
         public DateTime ReleaseDate { get; set; }
         public double Price { get; set; }
         public string Processor { get; set; }
@@ -58,12 +59,22 @@ namespace GamesShop.Models
         public string VideoCard { get; set; }
         public string DriveSpace { get; set; }
         public string Other { get; set; }
-        public virtual IEnumerable<OperatingSystem> OperatingSystems { get; set; }
+        public virtual List<OperatingSystem> OperatingSystems { get; set; }
         public virtual Publisher Publisher { get; set; }
         public virtual Developer Developer { get; set; }
-        public virtual IEnumerable<File> Files { get; set; }
-        public virtual IEnumerable<Category> Categories { get; set; }
-        public virtual IEnumerable<Comment> Comments { get; set; }
+        public virtual List<File> Files { get; set; }
+        public virtual List<Category> Categories { get; set; }
+        public virtual List<Comment> Comments { get; set; }
+        public virtual List<Key> Keys { get; set; }
+
+        public Product()
+        {
+            OperatingSystems = new List<OperatingSystem>();
+            Files = new List<File>();
+            Categories = new List<Category>();
+            Comments = new List<Comment>();
+            Keys = new List<Key>();
+        }
     }
 
     public class OperatingSystem
@@ -72,7 +83,7 @@ namespace GamesShop.Models
         public int Id { get; set; }
 
         [Display(Name="Назва")]
-        [Required(ErrorMessage = "Поле \"Назва\" має бути введено")]
+        [Required(ErrorMessage = "Поле 'Назва' має бути введено")]
         public string Name { get; set; }
     }
 
@@ -100,7 +111,7 @@ namespace GamesShop.Models
     {
         public int Id { get; set; }
         public string CategoryName { get; set; }
-        public virtual IEnumerable<Product> Products { get; set; }
+        public virtual List<Product> Products { get; set; }
     }
 
 
@@ -110,5 +121,19 @@ namespace GamesShop.Models
         public string CommentText { get; set; }
         public virtual ApplicationUser User { get; set; }
         public virtual Product Product { get; set; }
+    }
+
+    public class Key
+    {
+        public int Id { get; set; }
+        public string KeyString { get; set; }
+        public bool IsUsed { get; set; }
+        public virtual Product Product { get; set; }
+    }
+
+    public class Cart
+    {
+        public int Id { get; set; }
+        public virtual List<Product> Products { get; set; }
     }
 }

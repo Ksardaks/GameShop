@@ -48,7 +48,9 @@ namespace GamesShop.Models
         public List<int> Categories { get; set; }
 
         [Display(Name = "Файли")]
-        public IEnumerable<HttpPostedFileBase> Files { get; set; }
+        public List<HttpPostedFileBase> Files { get; set; }
+
+        public List<string> FilesForEdit { get; set; }
 
         [Display(Name = "Процесор")]
         [Required(ErrorMessage = "Поле \"Процесор\" має бути введено")]
@@ -71,5 +73,8 @@ namespace GamesShop.Models
 
         [Display(Name = "Операційні системи")]
         public List<int> OperatingSystems { get; set; }
+
+        [Display(Name = "Ключі")]
+        public List<string> Keys { get; set; }
     }
 }

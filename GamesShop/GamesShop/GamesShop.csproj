@@ -171,6 +171,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CatalogController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\OperatingSystemController.cs" />
     <Compile Include="Controllers\DeveloperController.cs" />
@@ -193,6 +194,18 @@
     <Compile Include="Migrations\202111191458160_2.cs" />
     <Compile Include="Migrations\202111191458160_2.designer.cs">
       <DependentUpon>202111191458160_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111241017033_3.cs" />
+    <Compile Include="Migrations\202111241017033_3.designer.cs">
+      <DependentUpon>202111241017033_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111241024529_4.cs" />
+    <Compile Include="Migrations\202111241024529_4.designer.cs">
+      <DependentUpon>202111241024529_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111241301116_5.cs" />
+    <Compile Include="Migrations\202111241301116_5.designer.cs">
+      <DependentUpon>202111241301116_5.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -348,9 +361,14 @@
     <Content Include="Views\Publisher\Delete.cshtml" />
     <Content Include="Views\Developer\Delete.cshtml" />
     <Content Include="Views\Category\Delete.cshtml" />
+    <Content Include="Views\Product\Key.cshtml" />
+    <Content Include="Views\Product\Delete.cshtml" />
+    <Content Include="Views\Catalog\Index.cshtml" />
+    <Content Include="Views\Catalog\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Files\" />
     <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>
@@ -365,6 +383,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111191458160_2.resx">
       <DependentUpon>202111191458160_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111241017033_3.resx">
+      <DependentUpon>202111241017033_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111241024529_4.resx">
+      <DependentUpon>202111241024529_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111241301116_5.resx">
+      <DependentUpon>202111241301116_5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -17,7 +17,8 @@ namespace GamesShop.Controllers
 
         public ActionResult Products()
         {
-            return PartialView();
+            ApplicationDbContext Context = new ApplicationDbContext();
+            return PartialView(Context.Products.ToList());
         }
 
         public ActionResult Categories()
@@ -41,7 +42,7 @@ namespace GamesShop.Controllers
         public ActionResult OperatingSystems()
         {
             ApplicationDbContext Context = new ApplicationDbContext();
-            return PartialView(Context.OperatingSystems.ToList());
+            return PartialView(Context.OperatingSystems.ToList().OrderByDescending(i => i.Id).ToList());
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿
+﻿@model List<GamesShop.Models.Product>
     <div class="onload">
 
     </div>
@@ -15,18 +15,18 @@
             <th>Price</th>
             <th>Operations</th>
         </tr>
-        @for (int i = 0; i < 10; i++)
+        @foreach (var Item in Model)
         {
             <tr>
-                <td><img src="https://cdn-ext.fanatical.com/production/product/1280x720/3de44d6e-17ff-4260-be3f-86d15647f03e.jpeg" width="230" /></td>
-                <td>Control Ultimate Edition</td>
-                <td>Экшен, Приключения</td>
-                <td>27 августа 2020</td>
-                <td>900 грн</td>
-                <td>
-                    <button class="btn btn-primary col-12 mt-1">Edit</button>
-                    <button class="btn btn-primary col-12 mt-1">Delete</button>
-                    <button class="btn btn-primary col-12 mt-1">More</button>
+                <td><img src="~/Files/@Item.Files.FirstOrDefault().FileName" width="230" /></td>
+                <td>@Item.ProductName</td>
+                <td>@foreach (var Category in Item.Categories) { @( Category.CategoryName + " ") }</td>
+                <td>@Item.ReleaseDate.ToLongDateString()</td>
+                <td>@Item.Price грн.</td>
+                <td width="20%">
+                    <a class="btn btn-primary col-12" data-ajax="true" data-ajax-loading="#Loading" data-ajax-mode="replace" data-ajax-success="PopUpShow();" data-ajax-update="#PopUpContent" href="/Product/Input/@Item.Id">Редагувати</a>
+                    <a class="btn btn-primary col-12 mt-1" data-ajax="true" data-ajax-loading="#Loading" data-ajax-mode="replace" data-ajax-success="PopUpShow();" data-ajax-update="#PopUpContent" href="/Product/Delete/@Item.Id">Видалити</a>
+                    <button class="btn btn-primary col-12 mt-1">Інформація</button>
                 </td>
             </tr>
         }

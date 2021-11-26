@@ -48,10 +48,7 @@ namespace GamesShop.Controllers
                 }
                 return PartialView(Model);
             }
-            else
-            {
-                return PartialView(Model);
-            }
+            return PartialView(Model);
         }
 
         public ActionResult Delete(int Id)

@@ -1,5 +1,7 @@
 ﻿@model List<GamesShop.Models.OperatingSystem>
 
+@Html.ValidationMessageFor(model => model[0].Name, "", new { @class = "col-12 text-danger" })
+
 <div class="col-12">
     <a class="btn btn-primary col-12 mt-5" data-ajax="true" data-ajax-loading="#Loading" data-ajax-mode="replace" data-ajax-success="PopUpShow();" data-ajax-update="#PopUpContent" href="/OperatingSystem/Input/-1">Add</a>
 </div>
@@ -15,7 +17,7 @@
             <td>@Item.Name</td>
             <td width="20%">
                 <a data-ajax="true" data-ajax-loading="#Loading" data-ajax-mode="replace" data-ajax-success="PopUpShow();" data-ajax-update="#PopUpContent" href="/OperatingSystem/Input/@Item.Id" class="btn btn-primary col-12 mt-1">Edit</a>
-                <a data-ajax="true" data-ajax-loading="#Loading" data-ajax-mode="replace" data-ajax-success="PopUpShow();" data-ajax-update="#PopUpContent"  href="/OperatingSystem/Delete/@Item.Id" class="btn btn-primary col-12 mt-1">Delete</a>
+                <a data-ajax="true" data-ajax-loading="#Loading" data-ajax-mode="replace" data-ajax-success="PopUpShow();" data-ajax-update="#PopUpContent" href="/OperatingSystem/Delete/@Item.Id" class="btn btn-primary col-12 mt-1">Delete</a>
             </td>
         </tr>
     }
