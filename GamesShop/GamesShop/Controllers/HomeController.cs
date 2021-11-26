@@ -9,13 +9,6 @@ namespace GamesShop.Controllers
 {
     public class HomeController : Controller
     {
-        IRepository Repos;
-
-        public HomeController(IRepository repos)
-        {
-            Repos = repos;
-        }
-
         public ActionResult Index()
         {
             return View();
