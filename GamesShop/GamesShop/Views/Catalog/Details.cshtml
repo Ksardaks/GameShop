@@ -25,40 +25,40 @@
         <div class="col-6 row">
             <h4 class="col-12 mb-5 text-center">@Model.ProductName</h4>
             <p class="col-6">
-                Categories: @foreach (var Category in Model.Categories)
+                Жанр: @foreach (var Category in Model.Categories)
                 {@(Category.CategoryName + " ")}
             </p>
             <p class="col-6 text-center" style="font-size: 20px; color: #f3ca20"><b>@Model.Price</b> грн.</p>
-            <p class="col-6">ReleaseDate: @Model.ReleaseDate.ToLongDateString()</p>
-            <button class="col-6 btn btn-primary">Add to Cart</button>
+            <p class="col-6">Дата випуску: @Model.ReleaseDate.ToLongDateString()</p>
+            <button class="col-6 btn btn-primary">Додати у кошик</button>
             <p>
-                OS: @foreach (var OS in Model.OperatingSystems)
+                Операційна система: @foreach (var OS in Model.OperatingSystems)
                 {@(OS.Name + " ")}
             </p>
-            <p>Developer: @Model.Developer.DeveloperName</p>
-            <p>Publisher: @Model.Publisher.PublisherName</p>
-            <p>Metacritic raiting: @Model.Rating</p>
+            <p>Розробник: @Model.Developer.DeveloperName</p>
+            <p>Видавець: @Model.Publisher.PublisherName</p>
+            <p>Рейтинг в Metacritic: @Model.Rating</p>
         </div>
         <div class="col-6 mt-5 row text-center">
-            <h5 class="col-12 mb-3 text-center">System requirements</h5>
+            <h5 class="col-12 mb-3 text-center">Системні характеристики</h5>
             <p class="col-12">
-                Proccesor: @Model.Processor
+                Процесор: @Model.Processor
             </p>
             <p class="col-12">
                 RAM: @Model.RAM
             </p>
             <p class="col-12">
-                VideoCard: @Model.VideoCard
+                Відеокарта: @Model.VideoCard
             </p>
             <p class="col-12">
-                DriveSpace: @Model.DriveSpace
+                Місце на диску: @Model.DriveSpace
             </p>
             <p class="col-12">
-                Other: @Model.Other
+                Інше: @Model.Other
             </p>
         </div>
         <div class="col-6 mt-5 row">
-            <h5 class="col-12 mb-3 text-center">Description</h5>
+            <h5 class="col-12 mb-3 text-center">Опис</h5>
             <p class="col-12 m-2" style=" word-break: break-word; ">
                 @Model.Description
             </p>

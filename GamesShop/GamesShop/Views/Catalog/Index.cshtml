@@ -10,13 +10,13 @@
 <div class="row">
     <div class="pt-4 row pb-5 bg-dark mt-5" style="position: fixed; color: white; left: 0; width: 23%; padding: 20px;">
         <div class="input-group mb-3">
-            <button class="col-12 btn btn-primary">Search by filters</button>
+            <button class="col-12 btn btn-primary">Пошук за фільтрами</button>
         </div>  
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Search">
+            <input type="text" class="form-control" placeholder="Пошук">
         </div>
         <div class="row mt-3 input-group">
-            <label class="form-label col-12">Price</label>
+            <label class="form-label col-12">Ціна</label>
             <div class="input-group mb-3">
                 <span class="input-group-text" style="width: 15%;" id="PriceFrom">Від</span>
                 <input type="number" min="0" value="0" class="form-control" aria-describedby="PriceFrom">
@@ -28,7 +28,7 @@
         </div>
 
         <div class="row input-group mt-3" style="justify-content: center; display: flex;">
-            <h5 class="col-12 mt-2">OS</h5>
+            <h5 class="col-12 mt-2">Операційна система</h5>
             @foreach (var Item in Context.OperatingSystems)
             {
                 <div class="form-check col-4" style="margin-left: 10px;">
@@ -40,7 +40,7 @@
             }
         </div>
         <div class="row input-group" style="justify-content: center; display: flex;">
-            <h5 class="col-12 mt-3">Categories</h5>
+            <h5 class="col-12 mt-3">Жанр</h5>
             @foreach (var Item in Context.Categories)
             {
                 <div class="form-check col-4" style="margin-left: 10px;">
@@ -52,7 +52,7 @@
             }
         </div>
         <div class="row input-group" style="justify-content: center; display: flex;">
-            <h5 class="col-12 mt-3">Developers</h5>
+            <h5 class="col-12 mt-3">Розробник</h5>
             @foreach (var Item in Context.Developers)
             {
                 <div class="form-check col-4" style="margin-left: 10px;">
