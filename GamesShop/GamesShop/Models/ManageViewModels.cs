@@ -28,14 +28,14 @@ namespace GamesShop.Models
     public class SetPasswordViewModel
     {
         [Required]
-        [StringLength(100, ErrorMessage = "Значение {0} должно содержать символов не менее: {2}.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "Значення {0} має містити символів не менше: {2}.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Новый пароль")]
+        [Display(Name = "Новий пароль")]
         public string NewPassword { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Подтверждение нового пароля")]
-        [Compare("NewPassword", ErrorMessage = "Новый пароль и его подтверждение не совпадают.")]
+        [Display(Name = "Підтвердження нового пароля")]
+        [Compare("NewPassword", ErrorMessage = "Новий пароль та його підтвердження не співпадають.")]
         public string ConfirmPassword { get; set; }
     }
 
@@ -47,14 +47,14 @@ namespace GamesShop.Models
         public string OldPassword { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "Значение {0} должно содержать символов не менее: {2}.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "Значення {0} має містити символів не менше: {2}.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Новый пароль")]
+        [Display(Name = "Новий пароль")]
         public string NewPassword { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Подтверждение нового пароля")]
-        [Compare("NewPassword", ErrorMessage = "Новый пароль и его подтверждение не совпадают.")]
+        [Display(Name = "Підтвердження нового пароля")]
+        [Compare("NewPassword", ErrorMessage = "Новий пароль та його підтвердження не співпадають.")]
         public string ConfirmPassword { get; set; }
     }
 
@@ -62,7 +62,7 @@ namespace GamesShop.Models
     {
         [Required]
         [Phone]
-        [Display(Name = "Номер телефона")]
+        [Display(Name = "Номер телефону")]
         public string Number { get; set; }
     }
 
@@ -74,7 +74,7 @@ namespace GamesShop.Models
 
         [Required]
         [Phone]
-        [Display(Name = "Номер телефона")]
+        [Display(Name = "Номер телефону")]
         public string PhoneNumber { get; set; }
     }
 
